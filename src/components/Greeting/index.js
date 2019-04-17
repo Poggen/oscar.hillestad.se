@@ -18,24 +18,22 @@ const randomBorderRadius = () => `${randomPercentage()}% ${randomPercentage()}% 
 
 const Greeting = ({ greetings }) => {
 
-  const [ style1, setStyle1 ] = useState({});
-  const [ style2, setStyle2 ] = useState({});
-  const [ style3, setStyle3 ] = useState({});
+  const [ style, setStyle ] = useState([]);
 
   useEffect(() => {
     setInterval(() => {
-      setStyle1({
+      setStyle([{
         borderRadius: randomBorderRadius(),
         transform: randomTransformRotation(),
-      })
-      setStyle2({
+      },
+      {
         borderRadius: randomBorderRadius(),
         transform: randomTransformRotation(),
-      })
-      setStyle3({
+      },
+      {
         borderRadius: randomBorderRadius(),
         transform: randomTransformRotation(),
-      })
+      }])
     }, 4000)
   }, [])
 
@@ -68,13 +66,13 @@ const Greeting = ({ greetings }) => {
             <Img className="greeting__hero-face" fluid={data.oscar.childImageSharp.fluid} alt="Oscar's face" />
             <div
               className={classNames("greeting__hero-shape", "greeting__hero-shape--1")}
-              style={style1}></div>
+              style={style[0]}></div>
             <div
               className={classNames("greeting__hero-shape", "greeting__hero-shape--2")}
-              style={style2}></div>
+              style={style[1]}></div>
             <div
               className={classNames("greeting__hero-shape", "greeting__hero-shape--3")}
-              style={style3}></div>
+              style={style[2]}></div>
           </div>
           <div className="greeting__container">
             <TextLoop interval={4000}>
