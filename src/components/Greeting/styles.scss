@@ -37,24 +37,30 @@ $breakpoint: 960px;
       opacity: .7;
       width: 100%;
       height: 50%;
+      transition: border-radius 4s ease, transform 4s ease;
+      perspective: 12rem;
+
+      > div {
+        will-change: border-radius, transform;
+      }
   
       &--1 {
         border-radius: 76% 24% 68% 32% / 53% 26% 74% 47%;
-        transform: rotate(-165deg);
+        transform: rotateX(-165deg);
         background-image: linear-gradient(45deg, #fffbd5 0%, #b20a2c 100%);
         width: 240px;
         height: 200px;
       }
       &--2 {
         border-radius: 27% 73% 35% 65% / 15% 68% 32% 85%;
-        transform: rotate(33deg);
+        transform: rotateX(33deg);
         background-image: linear-gradient(45deg, #22c1c3 0%, #fdbb2d 100%);
         width: 220px;
         height: 160px;
       }
       &--3 {
         border-radius: 39% 61% 55% 45% / 49% 68% 32% 51%;
-        transform: rotate(10deg);
+        transform: rotateX(10deg);
         background-image: linear-gradient(45deg, rgb(143, 121, 221) 0%, rgb(52, 50, 189) 100%);
         width: 200px;
         height: 200px;
