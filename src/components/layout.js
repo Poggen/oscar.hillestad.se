@@ -25,7 +25,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <main>{children}</main>
-        <footer style={{position: `relative`}}>
+        <footer>
           © {new Date().getFullYear()}
         </footer>
       </>
