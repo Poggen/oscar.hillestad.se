@@ -13,7 +13,7 @@ const plusOrMinus = () => Math.round(Math.random()) * 2 - 1
 const randomAngle = () => Math.random()*Math.PI*2;
 const randomScale = () => Math.random() + 0.5
 
-const randomTransformRotation = () => `rotateX(${plusOrMinus()}${randomAngle()}deg) rotateY(${plusOrMinus()}${randomAngle()}deg) rotateZ(${plusOrMinus()}${randomAngle()}deg) scale(${randomScale()})`
+const randomTransformRotation = () => `rotate(${plusOrMinus()}${randomAngle()}deg) scale(${randomScale()})`
 const randomBorderRadius = () => `${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}% / ${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}%`
 
 const Greeting = ({ greetings }) => {
@@ -81,7 +81,7 @@ const Greeting = ({ greetings }) => {
               {greetings.map((greeting, key) =>
                 <h1 className="greeting__heading" key={key}>
                   {greeting.greeting}!&nbsp;
-                  <span role="img" aria-label={greeting.emoji.label}>
+                  <span role="img" className={classNames("greeting__emoji", `greeting__emoji--${greeting.emoji.animation}`)} aria-label={greeting.emoji.label}>
                     {greeting.emoji.symbol}
                   </span>
                 </h1>

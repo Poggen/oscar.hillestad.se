@@ -5,6 +5,7 @@ const greetings =
       emoji: {
         label: "wave",
         symbol: "👋",
+        animation: "wave"
       }
     },
     {
@@ -12,6 +13,7 @@ const greetings =
       emoji: {
         label: "peace",
         symbol: "✌",
+        animation: "tada"
       }
     },
     {
@@ -19,6 +21,7 @@ const greetings =
       emoji: {
         label: "vulcan greeting",
         symbol: "🖖",
+        animation: "purple"
       }
     },
     {
@@ -26,6 +29,7 @@ const greetings =
       emoji: {
         label: "handshake",
         symbol: "🤝",
+        animation: "shake"
       }
     },
     {
@@ -33,6 +37,7 @@ const greetings =
       emoji: {
         label: "fistbump",
         symbol: "👊",
+        animation: "bump"
       }
     }
   ]
