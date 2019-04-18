@@ -32,18 +32,22 @@ $breakpoint: 960px;
       z-index: 10;
     }
     
+    &-shape-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      perspective: 12rem;
+    }
+    
     &-shape {
       position: absolute;
-      mix-blend-mode: saturation;
-      opacity: .7;
       width: 100%;
       height: 50%;
+      mix-blend-mode: saturation;
+      opacity: .7;
       transition: border-radius 4s ease, transform 4s ease;
-      perspective: 12rem;
-
-      > div {
-        will-change: border-radius, transform;
-      }
+      will-change: border-radius, transform;
   
       &--1 {
         border-radius: 76% 24% 68% 32% / 53% 26% 74% 47%;

@@ -64,15 +64,17 @@ const Greeting = ({ greetings }) => {
         <section className="greeting">
           <div className="greeting__hero">
             <Img className="greeting__hero-face" fluid={data.oscar.childImageSharp.fluid} alt="Oscar's face" />
-            <div
-              className={classNames("greeting__hero-shape", "greeting__hero-shape--1")}
-              style={style[0]}></div>
-            <div
-              className={classNames("greeting__hero-shape", "greeting__hero-shape--2")}
-              style={style[1]}></div>
-            <div
-              className={classNames("greeting__hero-shape", "greeting__hero-shape--3")}
-              style={style[2]}></div>
+            <div className="greeting__hero-shape-container">
+              <div
+                className={classNames("greeting__hero-shape", "greeting__hero-shape--1")}
+                style={style[0]}></div>
+              <div
+                className={classNames("greeting__hero-shape", "greeting__hero-shape--2")}
+                style={style[1]}></div>
+              <div
+                className={classNames("greeting__hero-shape", "greeting__hero-shape--3")}
+                style={style[2]}></div>
+            </div>
           </div>
           <div className="greeting__container">
             <TextLoop interval={4000}>
