@@ -39,27 +39,29 @@ progress {
 template {
   display: none;
 }
-a {
-  color: #9dc43e;
-  box-shadow: 0 2px 0 #9dc43e;
-  padding: .1rem 0;
-  position: relative;
-  text-decoration: none;
-  transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
-
-  &:hover {
-  color: #7e9e30;
-  box-shadow: 0 2px 0 #7e9e30;
-  cursor: pointer;
-  }
-
-  &:active {
-  box-shadow: none;
-  top: 5px;
-  }
-  &:active,
-  &:hover {
-    outline-width: 0;
+main {
+  a {
+    color: #9dc43e;
+    box-shadow: 0 2px 0 #9dc43e;
+    padding: .1rem 0;
+    position: relative;
+    text-decoration: none;
+    transition: color .2s ease-in-out, box-shadow .2s ease-in-out;
+  
+    &:hover {
+    color: #7e9e30;
+    box-shadow: 0 2px 0 #7e9e30;
+    cursor: pointer;
+    }
+  
+    &:active {
+    box-shadow: none;
+    top: 5px;
+    }
+    &:active,
+    &:hover {
+      outline-width: 0;
+    }
   }
 }
 main, footer {

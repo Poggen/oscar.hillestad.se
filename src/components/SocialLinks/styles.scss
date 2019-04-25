@@ -1,0 +1,18 @@
+$block: "SocialLinks";
+
+.#{$block} {
+  display: flex;
+  list-style: none;
+  margin: 2em auto;
+  justify-content: space-between;
+  max-width: 10rem;
+  
+  &__item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-right: .5rem;
+    }
+  }
+  
+
+}
