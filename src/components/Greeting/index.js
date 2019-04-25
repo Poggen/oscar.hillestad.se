@@ -90,7 +90,7 @@ const Greeting = ({ greetings }) => {
             </div>
           </div>
           <div className="greeting__container">
-            <TextLoop interval={40000}>
+            <TextLoop interval={4000}>
               {greetings.map((greeting, key) =>
                 <h1 className="greeting__heading" key={key}>
                   {greeting.greeting}!&nbsp;
