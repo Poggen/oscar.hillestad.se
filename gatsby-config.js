@@ -36,6 +36,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-preact`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-mdx`,
@@ -43,12 +44,6 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/layout.js"),
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/pages`,
       },
     },
     {
