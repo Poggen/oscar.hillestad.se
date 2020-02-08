@@ -1,14 +1,12 @@
 import React from "react"
-import classNames from "classnames"
-
 import SocialLinks from "../SocialLinks"
 
-import styles from "./styles.scss"
+import styles from "./styles.module.scss"
 
-const Footer = () => 
-  <footer className="footer">
+const Footer = () =>
+  <footer className={styles.footer}>
     <SocialLinks />
-    <span className="footer__copyright">© {new Date().getFullYear()}</span>
+    <span className={styles.footerCopyright}>© {new Date().getFullYear()}</span>
   </footer>
 
 export default Footer

@@ -4,9 +4,7 @@ import Img from "gatsby-image"
 import { StaticQuery, graphql } from "gatsby"
 import classNames from "classnames"
 
-import greetings from "../../data/greetings"
-
-import styles from "./styles.scss"
+import styles from "./styles.module.scss"
 
 const randomPercentage = () => Math.floor((Math.random() * 100)-30)
 const plusOrMinus = () => Math.round(Math.random()) * 2 - 1
@@ -74,33 +72,33 @@ const Greeting = ({ greetings }) => {
       `
     }
     render = { data => (
-        <section className="greeting">
-          <div className="greeting__hero">
-            <Img className="greeting__hero-face" fluid={data.oscar.childImageSharp.fluid} alt="Oscar's face" />
-            <div className="greeting__hero-shape-container">
+        <section className={styles.greeting}>
+          <div className={styles.greetingHero}>
+            <Img className={styles.greetingHeroFace} fluid={data.oscar.childImageSharp.fluid} alt="Oscar's face" />
+            <div className={styles.greetingHeroShapeContainer}>
               <div
-                className={classNames("greeting__hero-shape", "greeting__hero-shape--1")}
+                className={classNames(styles.greetingHeroShape, styles.greetingHeroShape__1)}
                 style={style[0]}></div>
               <div
-                className={classNames("greeting__hero-shape", "greeting__hero-shape--2")}
+                className={classNames(styles.greetingHeroShape, styles.greetingHeroShape__2)}
                 style={style[1]}></div>
               <div
-                className={classNames("greeting__hero-shape", "greeting__hero-shape--3")}
+                className={classNames(styles.greetingHeroShape, styles.greetingHeroShape__3)}
                 style={style[2]}></div>
             </div>
           </div>
-          <div className="greeting__container">
+          <div className={styles.greetingContainer}>
             <TextLoop interval={4000}>
               {greetings.map((greeting, key) =>
-                <h1 className="greeting__heading" key={key}>
+                <h1 className={styles.greetingHeading} key={key}>
                   {greeting.greeting}!&nbsp;
-                  <span role="img" className={classNames("greeting__emoji", `greeting__emoji--${greeting.emoji.animation}`)} aria-label={greeting.emoji.label}>
+                  <span role="img" className={classNames(styles.greetingEmoji, `greetingEmoji__${greeting.emoji.animation}`)} aria-label={greeting.emoji.label}>
                     {greeting.emoji.symbol}
                   </span>
                 </h1>
               )}
             </TextLoop>
-            <span className="greeting__lead">I'm Oscar, a product manager who enjoys building digital products. Currently Head of Product Development & IT at <a href="https://crossroads.se">Crossroads Loyalty Solutions</a>.</span>
+            <span className={styles.greetingLead}>I'm Oscar, a passionate product manager who loves creating digital products. Currently CPO / CTO at <a href="https://awardit.com">Awardit</a>.</span>
           </div>
         </section>
       )

@@ -2,7 +2,7 @@ $block: "footer";
 
 .#{$block} {
   text-align: center;
-  &__copyright {
+  &Copyright {
     font-size: .8rem;
   }
 }

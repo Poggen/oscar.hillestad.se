@@ -13,7 +13,7 @@ $breakpoint: 960px;
     flex-direction: row;
   }
 
-  &__hero {
+  &Hero {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,8 +23,8 @@ $breakpoint: 960px;
     flex: 0 0 7rem;
     width: 100%;
     max-width: 150px;
-   
-    &-face {
+
+    &Face {
       width: 100%;
       z-index: 10;
       position: absolute;
@@ -32,14 +32,14 @@ $breakpoint: 960px;
       z-index: 10;
     }
     
-    &-shape-container {
+    &ShapeContainer {
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
     }
     
-    &-shape {
+    &Shape {
       position: absolute;
       width: 100%;
       height: 50%;
@@ -48,21 +48,21 @@ $breakpoint: 960px;
       transition: border-radius 4s ease-in-out, transform 4s ease-in-out;
       will-change: border-radius, transform;
   
-      &--1 {
+      &__1 {
         border-radius: 76% 24% 68% 32% / 53% 26% 74% 47%;
         transform: rotate(-165deg);
         background-image: linear-gradient(45deg, #fffbd5 0%, #b20a2c 100%);
         width: 240px;
         height: 200px;
       }
-      &--2 {
+      &__2 {
         border-radius: 27% 73% 35% 65% / 15% 68% 32% 85%;
         transform: rotate(33deg);
         background-image: linear-gradient(45deg, #22c1c3 0%, #fdbb2d 100%);
         width: 220px;
         height: 160px;
       }
-      &--3 {
+      &__3 {
         border-radius: 39% 61% 55% 45% / 49% 68% 32% 51%;
         transform: rotate(10deg);
         background-image: linear-gradient(45deg, rgb(143, 121, 221) 0%, rgb(52, 50, 189) 100%);
@@ -72,17 +72,17 @@ $breakpoint: 960px;
     }
   }
 
-  &__container {
+  &Container {
     display: flex;
     flex: 0 0 50%;
     flex-direction: column;
   }
-  &__column {
+  &Column {
     :first-child {
       max-width: 70%;
     }
   }
-  &__heading {
+  &Heading {
     font-size: 3rem;
     
     @media screen and (min-width: $breakpoint) {
@@ -90,16 +90,16 @@ $breakpoint: 960px;
     }
 
   }
-  &__emoji {
+  &Emoji {
     display: inline-block;
-    &--wave {
+    &__wave {
       animation: wave 1s 2s;
       transform-origin: bottom center;
     }
-    &--tada {
+    &__tada {
       animation: tada 1s 2s;
     }
-    &--purple {
+    &__purple {
       animation: purple 1s 2s forwards;
       &:before {
         content: "🛸";
@@ -108,14 +108,14 @@ $breakpoint: 960px;
         animation: appear .5s 3s forwards;
       }
     }
-    &--bump {
+    &__bump {
       animation: bump 1s 2s;
     }
-    &--shake {
+    &__shake {
       animation: shake 1s 2s;
     }
   }
-  &__lead {
+  &Lead {
     font-size: 1.5rem;
     font-weight: normal;
     line-height: 1.6;

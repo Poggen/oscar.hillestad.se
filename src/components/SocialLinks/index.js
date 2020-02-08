@@ -1,7 +1,6 @@
 import React from "react"
-import classNames from "classnames"
 
-import styles from "./styles.scss"
+import styles from "./styles.module.scss"
 
 import Instagram from "../../../assets/icons/instagram.svg"
 import Facebook from "../../../assets/icons/facebook.svg"
@@ -44,14 +43,14 @@ const links = [
 ]
 
 const SocialLinks = () => 
-<ul className="SocialLinks">
-  {links.map((link, key) => 
-    <li key={key} className="SocialLinks__item">
-      <a href={link.url}>
-        <img className="SocialLinks__icon" src={link.icon} alt={link.name} />
-      </a>
-    </li>
-  )}
-</ul>
+  <ul className={styles.socialLinks} >
+    {links.map((link, key) => 
+      <li key={key} className={styles.socialLinksItem}>
+        <a href={link.url}>
+          <img src={link.icon} alt={link.name} />
+        </a>
+      </li>
+    )}
+  </ul>
 
 export default SocialLinks
