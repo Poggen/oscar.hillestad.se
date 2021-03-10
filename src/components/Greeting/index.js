@@ -98,7 +98,7 @@ const Greeting = ({ greetings }) => {
                 </h1>
               )}
             </TextLoop>
-            <span className={styles.greetingLead}>I'm Oscar, a passionate product manager who loves creating digital products. Currently CPO / CTO at <a href="https://awardit.com">Awardit</a>.</span>
+            <span className={styles.greetingLead}>I'm Oscar, a passionate team leader who loves creating digital products. Currently CPO / CTO at <a href="https://awardit.com">Awardit</a>.</span>
           </div>
         </section>
       )
