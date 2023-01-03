@@ -1,0 +1,51 @@
+---
+import Instagram from "/instagram.svg"
+import Facebook from "/facebook.svg"
+import LinkedIn from "/linkedin.svg"
+import Email from "/email.svg"
+import Twitter from "/twitter.svg"
+import Github from "/github.svg"
+
+const links = [
+  {
+    name: "Instagram",
+    icon: Instagram,
+    url: "http://instagram.com/oscarhillestad",
+  },
+  {
+    name: "LinkedIn",
+    icon: LinkedIn,
+    url: "https://www.linkedin.com/in/oscarhillestad",
+  },
+  {
+    name: "Facebook",
+    icon: Facebook,
+    url: "https://www.facebook.com/Poggen",
+  },
+  {
+    name: "Twitter",
+    icon: Twitter,
+    url: "https://twitter.com/poggn",
+  },
+  {
+    name: "GitHub",
+    icon: Github,
+    url: "https://github.com/poggen",
+  },
+  {
+    name: "Email",
+    icon: Email,
+    url: "mailto:oscar@hillestad.se",
+  },
+]
+---
+
+  <ul class="grid grid-cols-3 sm:grid-cols-6 container mx-auto max-w-xs my-8 gap-8 items-center place-items-center">
+    {links.map((link) => (
+      <li class="w-8 sm:w-6">
+        <a href={link.url}>
+          <img src={link.icon} alt={link.name} />
+        </a>
+      </li>
+    ))}
+  </ul>

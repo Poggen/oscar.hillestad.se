@@ -1,0 +1,63 @@
+---
+import { scroll, animate } from "motion"
+const {greetings } = Astro.props
+const randomPercentage = () => Math.floor(Math.random() * 100 - 30)
+const plusOrMinus = () => Math.round(Math.random()) * 2 - 1
+const randomAngle = () => Math.random() * Math.PI * 2
+const randomScale = () => Math.random() + 0.5
+
+const randomTransformRotation = () =>
+  `rotate(${plusOrMinus()}${randomAngle()}deg) scale(${randomScale()})`
+const randomBorderRadius = () =>
+  `${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}% / ${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}% ${randomPercentage()}%`
+---
+<script>
+import { animate, timeline } from "motion"
+
+  animate(".blob", { opacity: .7, rotate: 480 }, { duration: 1, delay: 1 })
+  animate(".greeting", {})
+</script>
+    <div class="relative flex flex-col h-screen md:flex-row items-center justify-around">
+      <div class="relative flex flex-col items-center m-40 z-10 basis-60 w-full">
+        <img
+          class="absolute top-0 max-w-xs w-full z-20 object-cover"
+          src="./oscar.png"
+          alt="Oscar's face"
+        />
+        <div class="flex justify-center items-center absolute">
+          <div
+          class="blob absolute w-full h-1/2 mix-blend-saturation opacity-0 transition-all will-change-transform md:w-60 md:h-52 rotate-[-165deg] bg-gradient-to-r from-[#fffbd5] to-[#b20a2c]"
+          style="border-radius: 76% 24% 68% 32% / 53% 26% 74% 47%;"
+          ></div>
+          <div
+          class="blob absolute w-full h-1/2 mix-blend-saturation opacity-0 transition-all will-change-transform md:w-60 md:h-52 rotate-[33deg] bg-gradient-to-r from-[#22c1c3] to-[#fdbb2d]"
+          style="border-radius: 27% 73% 35% 65% / 15% 68% 32% 85%;"
+
+          ></div>
+          <div
+          class="blob absolute w-full h-1/2 mix-blend-saturation opacity-0 transition-all will-change-transform md:w-60 md:h-52 rotate-[-10deg] bg-gradient-to-r from-[#8f79dd] to-[#3432bd]"
+          style="border-radius: 39% 61% 55% 45% / 49% 68% 32% 51%;"
+          ></div>
+        </div>
+      </div>
+      <div class="flex basis-1/2 flex-col prose prose-2xl">
+
+          {greetings.map((greeting) => (
+            <h1>
+              <span class="greeting">{greeting.greeting}!&nbsp;</span>
+              <span
+                role="img"
+                aria-label={greeting.emoji.label}
+                class="emoji"
+              >
+                {greeting.emoji.symbol}
+              </span>
+            </h1>
+          ))}
+        <span class="lead">
+          I'm Oscar, a passionate team leader who loves creating digital
+          products. Currently Technical Partner Manager at{" "}
+          <a href="https://wirelesscar.com">WirelessCar</a>.
+        </span>
+      </div>
+    </section>

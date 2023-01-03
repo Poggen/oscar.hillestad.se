@@ -1,0 +1,58 @@
+import Layout from "../../../components/layout"
+import { StaticImage } from "gatsby-plugin-image"
+
+<Layout>
+
+# Eatable
+
+This summer, I built a website for a company named EaTable, who needed help with building a stronger brand and attracting new customers & partners. On the first day of my summer vacation, I started desiging and building, using React/Next.js, Sanity & Framer motion.
+
+<StaticImage
+  src="../images/eatable.jpg"
+  layout="fixed"
+  objectFit="cover"
+  width={3840}
+  height={1000}
+  alt="Eatable"
+/>
+
+![Eatable](./eatable/eatable.jpg)
+
+## Animation
+
+Framer-Motion is an animation library for React that makes it easy to declaratively orchestrate stunning animations. For Eatable, I used it for everything from eye-catching, scroll-driven parallax animations, to playful, staggered reveal animations.
+
+## CMS
+
+Not wanting to limit themselves to the traditional CMS quadrant, Sanity pitches themselves as a “platform for structured content”. Based on JavaScript & React, this notion of structured data is what really makes them stand out from more traditional CMS:es, where everything is thought of as templates and page types. Even though I ended up building a relatively competent page builder in Sanity, the core concept of declaring data once and utilizing relations between various objects in the data model to create a great user, developer and editor experience, and then being able to use it across multiple places on a website (or even multiple platforms, such as apps or print) really spoke out to me.
+
+## Editor experience
+
+- Page builder
+- PortableText
+- Live previews
+
+## Developer experience
+
+### Declarative, rich schema
+
+TBD
+
+### Groq
+
+Having worked a lot with graphQL in the past, I was already sold on the flexibility of query languages that gives you what you want in the shape you want it.
+
+ISR ~125 pages x 2 locales
+
+Flexible I18n
+The site had to support multiple locales and Sanity’s flexible toolkit for i18n turned out to be a perfect match for this. Over the course of the project, I ended up using most of the internationalization strategies available in Sanity, depending on context;
+
+- Document-based (whole document / entity, like a page, exists in one version per locale)
+- Field-based (most fields in the data model are shared regardless of locale (eg. images, content order/structure, etc), but text fields are made translatable on a case-by-case basis
+- Site-wide strings (texts that are used across the page in various ways, such as form placeholders, slugs, static headings in specific templates, etc)
+
+Image of logo + two colors
+A logo and two colors
+From a design standpoint, all I had in terms of a brief was a logotype and two colors. The path from there to a cohesive website experience with XX+ components was everything but easy and took some iterations to get right. I opted to use tailwind’s easy-to-use class based design system as a starting point, and worked with shades of the two colors to craft a color palette that could be used in a wider range of use-cases.
+
+</Layout>
